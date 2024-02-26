@@ -1,0 +1,12 @@
+{
+  "helloWorld": "Hello World!",
+  "@helloWorld": {
+    "description": "The conventional newborn programmer greeting"
+  },
+  "hostTextTitle": "Host",
+  "@hostTextTitle": {},
+  "portTextTitle": "Port",
+  "@portTextTitle": {},
+  "connectionScreenTitle": "Enter your connection details below:",
+  "@connectionScreenTitle": {}
+}

@@ -1,0 +1,5 @@
+# Sets up the app localization generation
+arb-dir: lib/l10n
+template-arb-file: app_en.arb
+output-localization-file: app_localizations.dart
+nullable-getter: false
