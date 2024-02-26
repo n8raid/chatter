@@ -5,6 +5,7 @@ part 'theme_provider.g.dart';
 
 @riverpod
 class ThemeNotifier extends _$ThemeNotifier {
+  @override
   ThemeData build() {
     return ThemeData(
       colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
@@ -13,6 +14,6 @@ class ThemeNotifier extends _$ThemeNotifier {
   }
 
   void updateTheme(ThemeData newTheme) {
-      state = newTheme;
+    state = newTheme;
   }
 }

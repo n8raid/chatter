@@ -1,9 +1,11 @@
+// ignore_for_file: avoid_print
+
 import 'package:dumble/dumble.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:chatter/providers/theme_provider.dart';
-import 'package:opus_dart/opus_dart.dart';
+// import 'package:opus_dart/opus_dart.dart';
 
 void main() {
   // read config
@@ -48,7 +50,7 @@ class _MyHomePageState extends State<MyHomePage> {
         options: ConnectionOptions(
           host: serverUrl,
           port: portNum,
-          name: "chatter-test",
+          name: 'chatter-test',
         ),
         onBadCertificate: (cert) {
           return true;
@@ -72,21 +74,21 @@ class _MyHomePageState extends State<MyHomePage> {
       // Create a channel. If the channel is succesfully created, our callback is invoked.
       client!.createChannel(name: 'Dumble Test Channel');
 
-      const int inputSampleRate = 8000;
-      const int frameTimeMs = 40; // use frames of 40ms
-      const FrameTime frameTime = FrameTime.ms40;
-      const int outputSampleRate = 48000;
-      const int channels = 1;
+      // const int inputSampleRate = 8000;
+      // const int frameTimeMs = 40; // use frames of 40ms
+      // const FrameTime frameTime = FrameTime.ms40;
+      // const int outputSampleRate = 48000;
+      // const int channels = 1;
 
-      StreamOpusEncoder<int> encoder = StreamOpusEncoder.bytes(
-          frameTime: frameTime,
-          floatInput: false,
-          sampleRate: inputSampleRate,
-          channels: channels,
-          application: Application.voip);
-      final audioOut = client!.audio.sendAudio(
-        codec: AudioCodec.opus,
-      );
+      // StreamOpusEncoder<int> encoder = StreamOpusEncoder.bytes(
+      //     frameTime: frameTime,
+      //     floatInput: false,
+      //     sampleRate: inputSampleRate,
+      //     channels: channels,
+      //     application: Application.voip);
+      // final audioOut = client!.audio.sendAudio(
+      //   codec: AudioCodec.opus,
+      // );
     });
   }
 
@@ -138,7 +140,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         ),
                       ],
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 5,
                     ),
                     Column(
@@ -216,7 +218,7 @@ class MumbleExampleCallback with MumbleClientListener, UserListener {
 
   @override
   void onTextMessage(IncomingTextMessage message) {
-    print('[${new DateTime.now()}] ${message.actor?.name}: ${message.message}');
+    print('[${DateTime.now()}] ${message.actor?.name}: ${message.message}');
   }
 
   @override
