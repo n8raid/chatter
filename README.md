@@ -1,16 +1,21 @@
 # chatter
 
-A new Flutter project.
+A mumble client written in flutter, targeting mobile primarily
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+Chatter uses a few codegen packages ( app localizations, riverpod ), so when developing, its easiest to have
+the dart `build_runner` (the thing that does the code generating) running in `watch` mode. In other words,
+open a separate terminal and run `dart run build_runner watch`. This will have the `build_runner` watch for
+file changes and recompute any codegen files as necessary.
 
-A few resources to get you started if this is your first Flutter project:
+## Roadmap
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Make the connection to mumble servers transmit and recieve audio on:
+- [ ] Android
+- [ ] iOS
+- Optionally:
+  - [ ] Linux
+  - [ ] Windows
+  - [ ] MacOS
+  - [ ] Web?
