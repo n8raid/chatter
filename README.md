@@ -13,14 +13,13 @@ open a separate terminal and run
 ```sh
 dart run build_runner watch
 ```
+This will have the `build_runner` watch for file changes and recompute any codegen files as necessary.
 
 For one-shot codegen'ing, you can just run
 
 ```sh
 dart run build_runner build
 ```
-
-This will have the `build_runner` watch for file changes and recompute any codegen files as necessary.
 
 ## Roadmap
 
