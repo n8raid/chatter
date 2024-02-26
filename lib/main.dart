@@ -8,8 +8,6 @@ import 'package:chatter/providers/theme_provider.dart';
 // import 'package:opus_dart/opus_dart.dart';
 
 void main() {
-  // read config
-
   runApp(const ProviderScope(child: Chatter()));
 }
 
